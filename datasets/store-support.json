@@ -1,0 +1,27 @@
+{
+  "description": "Synthetic English store-support FAQ benchmark. Written before this evaluation; not a representative production workload. All labels are preserved, including failures.",
+  "faqs": [
+    {"id": "return-window", "reference": "How long do customers have to return an item?", "paraphrases": ["What is the time limit for returning an item?", "How much time is allowed to return a product?"], "negatives": ["Can opened cosmetics be returned?", "Are sale items eligible for returns?"]},
+    {"id": "return-process", "reference": "How can customers start a return?", "paraphrases": ["What steps should a customer follow to return an item?", "How does a customer request a return?"], "negatives": ["Who pays for return shipping?", "Is a receipt required for a return?"]},
+    {"id": "refund-time", "reference": "How long does a refund take to arrive?", "paraphrases": ["How much time does it take to receive a refund?", "What is the usual refund processing time?"], "negatives": ["Which payment method is used for refunds?", "Are shipping fees included in a refund?"]},
+    {"id": "shipping-time", "reference": "How long does standard delivery take?", "paraphrases": ["What is the usual delivery time for standard shipping?", "How many days does standard shipping usually take?"], "negatives": ["Is express delivery available?", "Do deliveries take place on weekends?"]},
+    {"id": "shipping-cost", "reference": "How much does standard shipping cost?", "paraphrases": ["What is the charge for standard delivery?", "What are the standard shipping fees?"], "negatives": ["Is express shipping free?", "Are customs fees included in international shipping?"]},
+    {"id": "international", "reference": "Do you offer international shipping?", "paraphrases": ["Can customers have orders shipped abroad?", "Do you deliver to other countries?"], "negatives": ["Can orders be delivered to a post office box?", "Which courier handles international deliveries?"]},
+    {"id": "payment-methods", "reference": "Which payment methods do you accept?", "paraphrases": ["What ways can customers pay at checkout?", "What payment options are available?"], "negatives": ["Can a payment be split across multiple cards?", "Can the payment method be changed after checkout?"]},
+    {"id": "payment-security", "reference": "Is it safe to pay by card on this website?", "paraphrases": ["Are card payments secure on your website?", "Is entering card details at checkout secure?"], "negatives": ["Are card details saved after payment?", "Why might a card payment be declined?"]},
+    {"id": "exchange", "reference": "How can customers exchange an item for a different size?", "paraphrases": ["What is the process for exchanging a product for another size?", "How does a customer request a size exchange?"], "negatives": ["Are exchanges available for a different colour?", "Is there a fee for exchanging an item?"]},
+    {"id": "cancellation", "reference": "How can customers cancel an order before it ships?", "paraphrases": ["What is the procedure for cancelling an order before dispatch?", "How does a customer cancel an order that has not shipped yet?"], "negatives": ["Can an order be cancelled after it has shipped?", "Is there a cancellation fee?"]}
+  ],
+  "bypass": [
+    "Where is my order?",
+    "Has my refund been processed?",
+    "Please cancel order AB12345.",
+    "Can I return an item purchased 45 days ago?",
+    "Why was I charged 29.99 euros for shipping?",
+    "Send the payment receipt to customer@example.com.",
+    "What is the delivery status for my parcel?",
+    "Can I get a refund of twenty dollars?",
+    "Explain the difference between Python lists and tuples.",
+    "What is the capital of France?"
+  ]
+}

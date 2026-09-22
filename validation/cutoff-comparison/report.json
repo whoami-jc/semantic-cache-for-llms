@@ -1,0 +1,1681 @@
+{
+  "development_sha256": "76f712d7ddcf7a69bc684424378af8c920d7606991d0846d0c45442ae65eea38",
+  "previous_evaluation_sha256": "c8e42c27ca80f8ba5d019f5a31f3971beb8c1a2fe37eeb1abe8f8294f4c0e190",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "note": "Retrospective comparison on already observed synthetic queries. No aliases, verifier, LLM calls or changes to labels. Not a new held-out evaluation.",
+  "results": {
+    "development": {
+      "0.8": {
+        "summary": {
+          "cases": 60,
+          "correct_reuse": 18,
+          "wrong_reuse": 0,
+          "positive_cases": 30,
+          "missed_positives": 12,
+          "precision": 1.0,
+          "decision_accuracy": 0.8,
+          "paraphrase_hits": 8,
+          "paraphrases": 20,
+          "bypass_misses": 10,
+          "median_lookup_ms": 20.63928049938113
+        },
+        "cases": [
+          {
+            "query": "How long do customers have to return an item?",
+            "type": "exact",
+            "expected": "return-window",
+            "actual": "return-window",
+            "similarity": 1.0,
+            "lookup_ms": 2.5380129991390277
+          },
+          {
+            "query": "What is the time limit for returning an item?",
+            "type": "paraphrase",
+            "expected": "return-window",
+            "actual": "return-window",
+            "similarity": 0.843529522419,
+            "lookup_ms": 21.799361002194928
+          },
+          {
+            "query": "How much time is allowed to return a product?",
+            "type": "paraphrase",
+            "expected": "return-window",
+            "actual": "return-window",
+            "similarity": 0.812304735184,
+            "lookup_ms": 21.0405260004336
+          },
+          {
+            "query": "Can opened cosmetics be returned?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.47849351167700005,
+            "lookup_ms": 21.447374998388113
+          },
+          {
+            "query": "Are sale items eligible for returns?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.5906394720079999,
+            "lookup_ms": 20.50679799867794
+          },
+          {
+            "query": "How can customers start a return?",
+            "type": "exact",
+            "expected": "return-process",
+            "actual": "return-process",
+            "similarity": 1.0,
+            "lookup_ms": 2.3835649990360253
+          },
+          {
+            "query": "What steps should a customer follow to return an item?",
+            "type": "paraphrase",
+            "expected": "return-process",
+            "actual": null,
+            "similarity": 0.741629719734,
+            "lookup_ms": 21.00814799996442
+          },
+          {
+            "query": "How does a customer request a return?",
+            "type": "paraphrase",
+            "expected": "return-process",
+            "actual": null,
+            "similarity": 0.781360864639,
+            "lookup_ms": 21.490356000867905
+          },
+          {
+            "query": "Who pays for return shipping?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.5884179472919999,
+            "lookup_ms": 20.743183999002213
+          },
+          {
+            "query": "Is a receipt required for a return?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.5652130842209999,
+            "lookup_ms": 20.743968998431228
+          },
+          {
+            "query": "How long does a refund take to arrive?",
+            "type": "exact",
+            "expected": "refund-time",
+            "actual": "refund-time",
+            "similarity": 1.0,
+            "lookup_ms": 2.2507730027427897
+          },
+          {
+            "query": "How much time does it take to receive a refund?",
+            "type": "paraphrase",
+            "expected": "refund-time",
+            "actual": "refund-time",
+            "similarity": 0.9479587674141,
+            "lookup_ms": 23.863813999923877
+          },
+          {
+            "query": "What is the usual refund processing time?",
+            "type": "paraphrase",
+            "expected": "refund-time",
+            "actual": "refund-time",
+            "similarity": 0.834255754948,
+            "lookup_ms": 24.06631400299375
+          },
+          {
+            "query": "Which payment method is used for refunds?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.6923116445540001,
+            "lookup_ms": 28.189087999635376
+          },
+          {
+            "query": "Are shipping fees included in a refund?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.514255106449,
+            "lookup_ms": 22.024349000275834
+          },
+          {
+            "query": "How long does standard delivery take?",
+            "type": "exact",
+            "expected": "shipping-time",
+            "actual": "shipping-time",
+            "similarity": 1.0,
+            "lookup_ms": 2.16723199991975
+          },
+          {
+            "query": "What is the usual delivery time for standard shipping?",
+            "type": "paraphrase",
+            "expected": "shipping-time",
+            "actual": null,
+            "similarity": 0.789590477943,
+            "lookup_ms": 20.792293002159568
+          },
+          {
+            "query": "How many days does standard shipping usually take?",
+            "type": "paraphrase",
+            "expected": "shipping-time",
+            "actual": null,
+            "similarity": 0.755128204823,
+            "lookup_ms": 20.942702998581808
+          },
+          {
+            "query": "Is express delivery available?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.50430136919,
+            "lookup_ms": 20.106086998566752
+          },
+          {
+            "query": "Do deliveries take place on weekends?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.5443509221080001,
+            "lookup_ms": 20.45630000066012
+          },
+          {
+            "query": "How much does standard shipping cost?",
+            "type": "exact",
+            "expected": "shipping-cost",
+            "actual": "shipping-cost",
+            "similarity": 1.0,
+            "lookup_ms": 2.2374859981937334
+          },
+          {
+            "query": "What is the charge for standard delivery?",
+            "type": "paraphrase",
+            "expected": "shipping-cost",
+            "actual": null,
+            "similarity": 0.720747411251,
+            "lookup_ms": 21.224881998932688
+          },
+          {
+            "query": "What are the standard shipping fees?",
+            "type": "paraphrase",
+            "expected": "shipping-cost",
+            "actual": "shipping-cost",
+            "similarity": 0.898282706738,
+            "lookup_ms": 21.03349700337276
+          },
+          {
+            "query": "Is express shipping free?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.65153157711,
+            "lookup_ms": 20.633771000575507
+          },
+          {
+            "query": "Are customs fees included in international shipping?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.637879192829,
+            "lookup_ms": 21.300649998011068
+          },
+          {
+            "query": "Do you offer international shipping?",
+            "type": "exact",
+            "expected": "international",
+            "actual": "international",
+            "similarity": 1.0,
+            "lookup_ms": 2.074919997539837
+          },
+          {
+            "query": "Can customers have orders shipped abroad?",
+            "type": "paraphrase",
+            "expected": "international",
+            "actual": null,
+            "similarity": 0.710810124874,
+            "lookup_ms": 20.644789998186752
+          },
+          {
+            "query": "Do you deliver to other countries?",
+            "type": "paraphrase",
+            "expected": "international",
+            "actual": null,
+            "similarity": 0.687100291252,
+            "lookup_ms": 20.446705999347614
+          },
+          {
+            "query": "Can orders be delivered to a post office box?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.45747864246400005,
+            "lookup_ms": 20.676172000094084
+          },
+          {
+            "query": "Which courier handles international deliveries?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.625069081783,
+            "lookup_ms": 20.22942500116187
+          },
+          {
+            "query": "Which payment methods do you accept?",
+            "type": "exact",
+            "expected": "payment-methods",
+            "actual": "payment-methods",
+            "similarity": 1.0,
+            "lookup_ms": 2.2055720000935253
+          },
+          {
+            "query": "What ways can customers pay at checkout?",
+            "type": "paraphrase",
+            "expected": "payment-methods",
+            "actual": null,
+            "similarity": 0.608368992805,
+            "lookup_ms": 21.002129000407876
+          },
+          {
+            "query": "What payment options are available?",
+            "type": "paraphrase",
+            "expected": "payment-methods",
+            "actual": null,
+            "similarity": 0.752821207047,
+            "lookup_ms": 22.015828999428777
+          },
+          {
+            "query": "Can a payment be split across multiple cards?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.44431853294400003,
+            "lookup_ms": 25.005939998663962
+          },
+          {
+            "query": "Can the payment method be changed after checkout?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.5491956472399999,
+            "lookup_ms": 25.663934997282922
+          },
+          {
+            "query": "Is it safe to pay by card on this website?",
+            "type": "exact",
+            "expected": "payment-security",
+            "actual": "payment-security",
+            "similarity": 1.0,
+            "lookup_ms": 2.502119001292158
+          },
+          {
+            "query": "Are card payments secure on your website?",
+            "type": "paraphrase",
+            "expected": "payment-security",
+            "actual": "payment-security",
+            "similarity": 0.851103961468,
+            "lookup_ms": 29.54476299782982
+          },
+          {
+            "query": "Is entering card details at checkout secure?",
+            "type": "paraphrase",
+            "expected": "payment-security",
+            "actual": null,
+            "similarity": 0.6114408969880001,
+            "lookup_ms": 20.858326999587007
+          },
+          {
+            "query": "Are card details saved after payment?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.543619632721,
+            "lookup_ms": 21.029472998634446
+          },
+          {
+            "query": "Why might a card payment be declined?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.438648760319,
+            "lookup_ms": 20.69749799920828
+          },
+          {
+            "query": "How can customers exchange an item for a different size?",
+            "type": "exact",
+            "expected": "exchange",
+            "actual": "exchange",
+            "similarity": 1.0,
+            "lookup_ms": 2.3934999990160577
+          },
+          {
+            "query": "What is the process for exchanging a product for another size?",
+            "type": "paraphrase",
+            "expected": "exchange",
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.1228940020373557
+          },
+          {
+            "query": "How does a customer request a size exchange?",
+            "type": "paraphrase",
+            "expected": "exchange",
+            "actual": "exchange",
+            "similarity": 0.803802132607,
+            "lookup_ms": 20.978372998797568
+          },
+          {
+            "query": "Are exchanges available for a different colour?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.40089523792299997,
+            "lookup_ms": 20.512194001639728
+          },
+          {
+            "query": "Is there a fee for exchanging an item?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9070720007002819
+          },
+          {
+            "query": "How can customers cancel an order before it ships?",
+            "type": "exact",
+            "expected": "cancellation",
+            "actual": "cancellation",
+            "similarity": 1.0,
+            "lookup_ms": 2.328702001250349
+          },
+          {
+            "query": "What is the procedure for cancelling an order before dispatch?",
+            "type": "paraphrase",
+            "expected": "cancellation",
+            "actual": null,
+            "similarity": 0.720845222473,
+            "lookup_ms": 21.361941999202827
+          },
+          {
+            "query": "How does a customer cancel an order that has not shipped yet?",
+            "type": "paraphrase",
+            "expected": "cancellation",
+            "actual": "cancellation",
+            "similarity": 0.9112703800201,
+            "lookup_ms": 21.56487200045376
+          },
+          {
+            "query": "Can an order be cancelled after it has shipped?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.786748111248,
+            "lookup_ms": 21.087467001052573
+          },
+          {
+            "query": "Is there a cancellation fee?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.511021316051,
+            "lookup_ms": 20.0537210002949
+          },
+          {
+            "query": "Where is my order?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0052280013042036
+          },
+          {
+            "query": "Has my refund been processed?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0615460014378186
+          },
+          {
+            "query": "Please cancel order AB12345.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0579310001048725
+          },
+          {
+            "query": "Can I return an item purchased 45 days ago?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0803879995364696
+          },
+          {
+            "query": "Why was I charged 29.99 euros for shipping?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9685320001153741
+          },
+          {
+            "query": "Send the payment receipt to customer@example.com.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9914399997796863
+          },
+          {
+            "query": "What is the delivery status for my parcel?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9626530008972622
+          },
+          {
+            "query": "Can I get a refund of twenty dollars?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9704190015327185
+          },
+          {
+            "query": "Explain the difference between Python lists and tuples.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.961026998993475
+          },
+          {
+            "query": "What is the capital of France?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9761599976627622
+          }
+        ]
+      },
+      "0.78": {
+        "summary": {
+          "cases": 60,
+          "correct_reuse": 20,
+          "wrong_reuse": 1,
+          "positive_cases": 30,
+          "missed_positives": 10,
+          "precision": 0.9523809523809523,
+          "decision_accuracy": 0.8166666666666667,
+          "paraphrase_hits": 10,
+          "paraphrases": 20,
+          "bypass_misses": 10,
+          "median_lookup_ms": 20.236453499819618
+        },
+        "cases": [
+          {
+            "query": "How long do customers have to return an item?",
+            "type": "exact",
+            "expected": "return-window",
+            "actual": "return-window",
+            "similarity": 1.0,
+            "lookup_ms": 1.9871610020345543
+          },
+          {
+            "query": "What is the time limit for returning an item?",
+            "type": "paraphrase",
+            "expected": "return-window",
+            "actual": "return-window",
+            "similarity": 0.843529522419,
+            "lookup_ms": 20.666094998887274
+          },
+          {
+            "query": "How much time is allowed to return a product?",
+            "type": "paraphrase",
+            "expected": "return-window",
+            "actual": "return-window",
+            "similarity": 0.812304735184,
+            "lookup_ms": 20.90030600083992
+          },
+          {
+            "query": "Can opened cosmetics be returned?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.47849351167700005,
+            "lookup_ms": 19.816954001726117
+          },
+          {
+            "query": "Are sale items eligible for returns?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.5906394720079999,
+            "lookup_ms": 20.37202400242677
+          },
+          {
+            "query": "How can customers start a return?",
+            "type": "exact",
+            "expected": "return-process",
+            "actual": "return-process",
+            "similarity": 1.0,
+            "lookup_ms": 2.2433060003095306
+          },
+          {
+            "query": "What steps should a customer follow to return an item?",
+            "type": "paraphrase",
+            "expected": "return-process",
+            "actual": null,
+            "similarity": 0.741629719734,
+            "lookup_ms": 25.74028399976669
+          },
+          {
+            "query": "How does a customer request a return?",
+            "type": "paraphrase",
+            "expected": "return-process",
+            "actual": "return-process",
+            "similarity": 0.781360864639,
+            "lookup_ms": 21.178577000682708
+          },
+          {
+            "query": "Who pays for return shipping?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.5884179472919999,
+            "lookup_ms": 23.51936999912141
+          },
+          {
+            "query": "Is a receipt required for a return?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.5652130842209999,
+            "lookup_ms": 21.148071999050444
+          },
+          {
+            "query": "How long does a refund take to arrive?",
+            "type": "exact",
+            "expected": "refund-time",
+            "actual": "refund-time",
+            "similarity": 1.0,
+            "lookup_ms": 2.2343860000546556
+          },
+          {
+            "query": "How much time does it take to receive a refund?",
+            "type": "paraphrase",
+            "expected": "refund-time",
+            "actual": "refund-time",
+            "similarity": 0.9479587674141,
+            "lookup_ms": 21.580210002866806
+          },
+          {
+            "query": "What is the usual refund processing time?",
+            "type": "paraphrase",
+            "expected": "refund-time",
+            "actual": "refund-time",
+            "similarity": 0.834255754948,
+            "lookup_ms": 21.174624998820946
+          },
+          {
+            "query": "Which payment method is used for refunds?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.6923116445540001,
+            "lookup_ms": 20.25044200127013
+          },
+          {
+            "query": "Are shipping fees included in a refund?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.514255106449,
+            "lookup_ms": 20.43848299945239
+          },
+          {
+            "query": "How long does standard delivery take?",
+            "type": "exact",
+            "expected": "shipping-time",
+            "actual": "shipping-time",
+            "similarity": 1.0,
+            "lookup_ms": 2.2106789983808994
+          },
+          {
+            "query": "What is the usual delivery time for standard shipping?",
+            "type": "paraphrase",
+            "expected": "shipping-time",
+            "actual": "shipping-time",
+            "similarity": 0.789590477943,
+            "lookup_ms": 20.786274999409216
+          },
+          {
+            "query": "How many days does standard shipping usually take?",
+            "type": "paraphrase",
+            "expected": "shipping-time",
+            "actual": null,
+            "similarity": 0.755128204823,
+            "lookup_ms": 20.85995000015828
+          },
+          {
+            "query": "Is express delivery available?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.50430136919,
+            "lookup_ms": 20.261301997379633
+          },
+          {
+            "query": "Do deliveries take place on weekends?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.5443509221080001,
+            "lookup_ms": 20.795026000996586
+          },
+          {
+            "query": "How much does standard shipping cost?",
+            "type": "exact",
+            "expected": "shipping-cost",
+            "actual": "shipping-cost",
+            "similarity": 1.0,
+            "lookup_ms": 2.2414419981942046
+          },
+          {
+            "query": "What is the charge for standard delivery?",
+            "type": "paraphrase",
+            "expected": "shipping-cost",
+            "actual": null,
+            "similarity": 0.720747411251,
+            "lookup_ms": 20.186961999570485
+          },
+          {
+            "query": "What are the standard shipping fees?",
+            "type": "paraphrase",
+            "expected": "shipping-cost",
+            "actual": "shipping-cost",
+            "similarity": 0.898282706738,
+            "lookup_ms": 20.002541998110246
+          },
+          {
+            "query": "Is express shipping free?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.65153157711,
+            "lookup_ms": 20.57723799953237
+          },
+          {
+            "query": "Are customs fees included in international shipping?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.637879192829,
+            "lookup_ms": 20.048037000378827
+          },
+          {
+            "query": "Do you offer international shipping?",
+            "type": "exact",
+            "expected": "international",
+            "actual": "international",
+            "similarity": 1.0,
+            "lookup_ms": 2.277997999044601
+          },
+          {
+            "query": "Can customers have orders shipped abroad?",
+            "type": "paraphrase",
+            "expected": "international",
+            "actual": null,
+            "similarity": 0.710810124874,
+            "lookup_ms": 19.925848002458224
+          },
+          {
+            "query": "Do you deliver to other countries?",
+            "type": "paraphrase",
+            "expected": "international",
+            "actual": null,
+            "similarity": 0.687100291252,
+            "lookup_ms": 20.18590999796288
+          },
+          {
+            "query": "Can orders be delivered to a post office box?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.45747864246400005,
+            "lookup_ms": 20.722937002574326
+          },
+          {
+            "query": "Which courier handles international deliveries?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.625069081783,
+            "lookup_ms": 20.677956999861635
+          },
+          {
+            "query": "Which payment methods do you accept?",
+            "type": "exact",
+            "expected": "payment-methods",
+            "actual": "payment-methods",
+            "similarity": 1.0,
+            "lookup_ms": 2.296645998285385
+          },
+          {
+            "query": "What ways can customers pay at checkout?",
+            "type": "paraphrase",
+            "expected": "payment-methods",
+            "actual": null,
+            "similarity": 0.608368992805,
+            "lookup_ms": 20.720303000416607
+          },
+          {
+            "query": "What payment options are available?",
+            "type": "paraphrase",
+            "expected": "payment-methods",
+            "actual": null,
+            "similarity": 0.752821207047,
+            "lookup_ms": 20.222464998369105
+          },
+          {
+            "query": "Can a payment be split across multiple cards?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.44431853294400003,
+            "lookup_ms": 20.628312002372695
+          },
+          {
+            "query": "Can the payment method be changed after checkout?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.5491956472399999,
+            "lookup_ms": 20.89102199897752
+          },
+          {
+            "query": "Is it safe to pay by card on this website?",
+            "type": "exact",
+            "expected": "payment-security",
+            "actual": "payment-security",
+            "similarity": 1.0,
+            "lookup_ms": 2.352804996917257
+          },
+          {
+            "query": "Are card payments secure on your website?",
+            "type": "paraphrase",
+            "expected": "payment-security",
+            "actual": "payment-security",
+            "similarity": 0.851103961468,
+            "lookup_ms": 20.517234999715583
+          },
+          {
+            "query": "Is entering card details at checkout secure?",
+            "type": "paraphrase",
+            "expected": "payment-security",
+            "actual": null,
+            "similarity": 0.6114408969880001,
+            "lookup_ms": 20.389464996696915
+          },
+          {
+            "query": "Are card details saved after payment?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.543619632721,
+            "lookup_ms": 20.012988003145438
+          },
+          {
+            "query": "Why might a card payment be declined?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.438648760319,
+            "lookup_ms": 20.53781699942192
+          },
+          {
+            "query": "How can customers exchange an item for a different size?",
+            "type": "exact",
+            "expected": "exchange",
+            "actual": "exchange",
+            "similarity": 1.0,
+            "lookup_ms": 2.1781420000479557
+          },
+          {
+            "query": "What is the process for exchanging a product for another size?",
+            "type": "paraphrase",
+            "expected": "exchange",
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.118584998039296
+          },
+          {
+            "query": "How does a customer request a size exchange?",
+            "type": "paraphrase",
+            "expected": "exchange",
+            "actual": "exchange",
+            "similarity": 0.803802132607,
+            "lookup_ms": 20.626097000786103
+          },
+          {
+            "query": "Are exchanges available for a different colour?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.40089523792299997,
+            "lookup_ms": 20.30499700049404
+          },
+          {
+            "query": "Is there a fee for exchanging an item?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.198723002744373
+          },
+          {
+            "query": "How can customers cancel an order before it ships?",
+            "type": "exact",
+            "expected": "cancellation",
+            "actual": "cancellation",
+            "similarity": 1.0,
+            "lookup_ms": 2.3531240003649145
+          },
+          {
+            "query": "What is the procedure for cancelling an order before dispatch?",
+            "type": "paraphrase",
+            "expected": "cancellation",
+            "actual": null,
+            "similarity": 0.720845222473,
+            "lookup_ms": 21.494297998287948
+          },
+          {
+            "query": "How does a customer cancel an order that has not shipped yet?",
+            "type": "paraphrase",
+            "expected": "cancellation",
+            "actual": "cancellation",
+            "similarity": 0.9112703800201,
+            "lookup_ms": 22.633119999227347
+          },
+          {
+            "query": "Can an order be cancelled after it has shipped?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": "cancellation",
+            "similarity": 0.786748111248,
+            "lookup_ms": 21.037378002802143
+          },
+          {
+            "query": "Is there a cancellation fee?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.511021316051,
+            "lookup_ms": 20.268234999093693
+          },
+          {
+            "query": "Where is my order?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.1164120005560108
+          },
+          {
+            "query": "Has my refund been processed?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.113580001401715
+          },
+          {
+            "query": "Please cancel order AB12345.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0990650007443037
+          },
+          {
+            "query": "Can I return an item purchased 45 days ago?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.2312449980527163
+          },
+          {
+            "query": "Why was I charged 29.99 euros for shipping?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0844290009117685
+          },
+          {
+            "query": "Send the payment receipt to customer@example.com.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0360960004618391
+          },
+          {
+            "query": "What is the delivery status for my parcel?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0193310008617118
+          },
+          {
+            "query": "Can I get a refund of twenty dollars?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9914949987432919
+          },
+          {
+            "query": "Explain the difference between Python lists and tuples.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9901279991026968
+          },
+          {
+            "query": "What is the capital of France?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9922869976435322
+          }
+        ]
+      }
+    },
+    "previous_evaluation": {
+      "0.8": {
+        "summary": {
+          "cases": 40,
+          "correct_reuse": 9,
+          "wrong_reuse": 1,
+          "positive_cases": 20,
+          "missed_positives": 11,
+          "precision": 0.9,
+          "decision_accuracy": 0.7,
+          "paraphrase_hits": 9,
+          "paraphrases": 20,
+          "bypass_misses": 10,
+          "median_lookup_ms": 20.29844749995391
+        },
+        "cases": [
+          {
+            "query": "What is the deadline for returning a purchase?",
+            "type": "paraphrase",
+            "expected": "return-window",
+            "actual": null,
+            "similarity": 0.769490242004,
+            "lookup_ms": 20.39032199900248
+          },
+          {
+            "query": "Within what period can a product be returned?",
+            "type": "paraphrase",
+            "expected": "return-window",
+            "actual": null,
+            "similarity": 0.712927699089,
+            "lookup_ms": 20.669941000960534
+          },
+          {
+            "query": "How do customers arrange a product return?",
+            "type": "paraphrase",
+            "expected": "return-process",
+            "actual": null,
+            "similarity": 0.796246469021,
+            "lookup_ms": 21.38215399827459
+          },
+          {
+            "query": "What must a customer do to initiate a return?",
+            "type": "paraphrase",
+            "expected": "return-process",
+            "actual": "return-process",
+            "similarity": 0.8750664591790001,
+            "lookup_ms": 20.428633997653378
+          },
+          {
+            "query": "How long should customers wait for a refund to come through?",
+            "type": "paraphrase",
+            "expected": "refund-time",
+            "actual": "refund-time",
+            "similarity": 0.844450294971,
+            "lookup_ms": 21.724567999626743
+          },
+          {
+            "query": "When does a refund normally arrive?",
+            "type": "paraphrase",
+            "expected": "refund-time",
+            "actual": "refund-time",
+            "similarity": 0.8599892258640001,
+            "lookup_ms": 20.75466300084372
+          },
+          {
+            "query": "What delivery duration should customers expect with standard shipping?",
+            "type": "paraphrase",
+            "expected": "shipping-time",
+            "actual": "shipping-time",
+            "similarity": 0.805307209492,
+            "lookup_ms": 21.33469399996102
+          },
+          {
+            "query": "How long is the normal standard shipping wait?",
+            "type": "paraphrase",
+            "expected": "shipping-time",
+            "actual": null,
+            "similarity": 0.7873235344889999,
+            "lookup_ms": 20.37249999921187
+          },
+          {
+            "query": "What price is charged for standard shipping?",
+            "type": "paraphrase",
+            "expected": "shipping-cost",
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0609339988150168
+          },
+          {
+            "query": "How much is the standard delivery fee?",
+            "type": "paraphrase",
+            "expected": "shipping-cost",
+            "actual": "shipping-cost",
+            "similarity": 0.823851048946,
+            "lookup_ms": 20.923206000588834
+          },
+          {
+            "query": "Is overseas shipping offered?",
+            "type": "paraphrase",
+            "expected": "international",
+            "actual": "international",
+            "similarity": 0.837677299976,
+            "lookup_ms": 20.411505000083707
+          },
+          {
+            "query": "Does the shop ship internationally?",
+            "type": "paraphrase",
+            "expected": "international",
+            "actual": null,
+            "similarity": 0.759866416454,
+            "lookup_ms": 20.109088996832725
+          },
+          {
+            "query": "Which forms of payment are supported?",
+            "type": "paraphrase",
+            "expected": "payment-methods",
+            "actual": null,
+            "similarity": 0.761671066284,
+            "lookup_ms": 20.14998199956608
+          },
+          {
+            "query": "How can customers pay for purchases?",
+            "type": "paraphrase",
+            "expected": "payment-methods",
+            "actual": null,
+            "similarity": 0.561494767666,
+            "lookup_ms": 19.93003499956103
+          },
+          {
+            "query": "Is paying with a bank card secure here?",
+            "type": "paraphrase",
+            "expected": "payment-security",
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0300100002496038
+          },
+          {
+            "query": "Can customers safely enter card information to pay on this site?",
+            "type": "paraphrase",
+            "expected": "payment-security",
+            "actual": "payment-security",
+            "similarity": 0.804706513882,
+            "lookup_ms": 22.10677599941846
+          },
+          {
+            "query": "How can a product be exchanged for another size?",
+            "type": "paraphrase",
+            "expected": "exchange",
+            "actual": null,
+            "similarity": 0.705139100552,
+            "lookup_ms": 20.58235699951183
+          },
+          {
+            "query": "What should a customer do to arrange a size exchange?",
+            "type": "paraphrase",
+            "expected": "exchange",
+            "actual": "exchange",
+            "similarity": 0.807845950127,
+            "lookup_ms": 20.722645000205375
+          },
+          {
+            "query": "What steps cancel an order before dispatch?",
+            "type": "paraphrase",
+            "expected": "cancellation",
+            "actual": null,
+            "similarity": 0.723148047924,
+            "lookup_ms": 20.33957399908104
+          },
+          {
+            "query": "How is an order cancelled before shipping begins?",
+            "type": "paraphrase",
+            "expected": "cancellation",
+            "actual": "cancellation",
+            "similarity": 0.8093518018720001,
+            "lookup_ms": 20.257321000826778
+          },
+          {
+            "query": "Can damaged items be returned without their packaging?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.56444054842,
+            "lookup_ms": 20.632396001019515
+          },
+          {
+            "query": "Is the return deadline extended for holiday purchases?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.583658576012,
+            "lookup_ms": 20.733550998556893
+          },
+          {
+            "query": "Can a refund be paid as store credit instead?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.444993853569,
+            "lookup_ms": 21.185593999689445
+          },
+          {
+            "query": "Is standard delivery guaranteed by a specific date?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.608007907867,
+            "lookup_ms": 20.442425997316604
+          },
+          {
+            "query": "Is standard shipping free for large orders?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.704290091991,
+            "lookup_ms": 20.161341002676636
+          },
+          {
+            "query": "How much does overseas shipping cost?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": "shipping-cost",
+            "similarity": 0.803598284721,
+            "lookup_ms": 20.621922998543596
+          },
+          {
+            "query": "Are installment payments available?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.54380428791,
+            "lookup_ms": 19.859039999573724
+          },
+          {
+            "query": "Does paying by card require an extra authentication step?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.162122000096133
+          },
+          {
+            "query": "Can a size exchange be requested after an item has been worn?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.6927084326740001,
+            "lookup_ms": 20.852218000072753
+          },
+          {
+            "query": "Can a cancelled order be reinstated?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.569765210152,
+            "lookup_ms": 20.152336001046933
+          },
+          {
+            "query": "When will my refund arrive?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.160822001111228
+          },
+          {
+            "query": "Cancel purchase ZX9876 before shipping.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.1280100006842986
+          },
+          {
+            "query": "What is the status of our return?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0391190007794648
+          },
+          {
+            "query": "Is delivery available tomorrow?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9878310011117719
+          },
+          {
+            "query": "Refund the shipping charge of 12 euros.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.1898669981746934
+          },
+          {
+            "query": "Send payment confirmation to buyer@example.org.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0656399972504005
+          },
+          {
+            "query": "Can I exchange my damaged purchase?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0893490034504794
+          },
+          {
+            "query": "Track the delivery for my account.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9536129982734565
+          },
+          {
+            "query": "How does a binary search algorithm work?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0899650005740114
+          },
+          {
+            "query": "Who wrote Pride and Prejudice?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.070684000296751
+          }
+        ]
+      },
+      "0.78": {
+        "summary": {
+          "cases": 40,
+          "correct_reuse": 11,
+          "wrong_reuse": 1,
+          "positive_cases": 20,
+          "missed_positives": 9,
+          "precision": 0.9166666666666666,
+          "decision_accuracy": 0.75,
+          "paraphrase_hits": 11,
+          "paraphrases": 20,
+          "bypass_misses": 10,
+          "median_lookup_ms": 20.643929499783553
+        },
+        "cases": [
+          {
+            "query": "What is the deadline for returning a purchase?",
+            "type": "paraphrase",
+            "expected": "return-window",
+            "actual": null,
+            "similarity": 0.769490242004,
+            "lookup_ms": 21.38082000237773
+          },
+          {
+            "query": "Within what period can a product be returned?",
+            "type": "paraphrase",
+            "expected": "return-window",
+            "actual": null,
+            "similarity": 0.712927699089,
+            "lookup_ms": 20.573942998453276
+          },
+          {
+            "query": "How do customers arrange a product return?",
+            "type": "paraphrase",
+            "expected": "return-process",
+            "actual": "return-process",
+            "similarity": 0.796246469021,
+            "lookup_ms": 22.964586998568848
+          },
+          {
+            "query": "What must a customer do to initiate a return?",
+            "type": "paraphrase",
+            "expected": "return-process",
+            "actual": "return-process",
+            "similarity": 0.8750664591790001,
+            "lookup_ms": 20.58196600046358
+          },
+          {
+            "query": "How long should customers wait for a refund to come through?",
+            "type": "paraphrase",
+            "expected": "refund-time",
+            "actual": "refund-time",
+            "similarity": 0.844450294971,
+            "lookup_ms": 21.699515000364045
+          },
+          {
+            "query": "When does a refund normally arrive?",
+            "type": "paraphrase",
+            "expected": "refund-time",
+            "actual": "refund-time",
+            "similarity": 0.8599892258640001,
+            "lookup_ms": 21.325841000361834
+          },
+          {
+            "query": "What delivery duration should customers expect with standard shipping?",
+            "type": "paraphrase",
+            "expected": "shipping-time",
+            "actual": "shipping-time",
+            "similarity": 0.805307209492,
+            "lookup_ms": 20.705892999103526
+          },
+          {
+            "query": "How long is the normal standard shipping wait?",
+            "type": "paraphrase",
+            "expected": "shipping-time",
+            "actual": "shipping-time",
+            "similarity": 0.7873235344889999,
+            "lookup_ms": 20.126529998378828
+          },
+          {
+            "query": "What price is charged for standard shipping?",
+            "type": "paraphrase",
+            "expected": "shipping-cost",
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.189456001156941
+          },
+          {
+            "query": "How much is the standard delivery fee?",
+            "type": "paraphrase",
+            "expected": "shipping-cost",
+            "actual": "shipping-cost",
+            "similarity": 0.823851048946,
+            "lookup_ms": 20.769251001183875
+          },
+          {
+            "query": "Is overseas shipping offered?",
+            "type": "paraphrase",
+            "expected": "international",
+            "actual": "international",
+            "similarity": 0.837677299976,
+            "lookup_ms": 20.000233002065215
+          },
+          {
+            "query": "Does the shop ship internationally?",
+            "type": "paraphrase",
+            "expected": "international",
+            "actual": null,
+            "similarity": 0.759866416454,
+            "lookup_ms": 20.146113998634974
+          },
+          {
+            "query": "Which forms of payment are supported?",
+            "type": "paraphrase",
+            "expected": "payment-methods",
+            "actual": null,
+            "similarity": 0.761671066284,
+            "lookup_ms": 20.89182700001402
+          },
+          {
+            "query": "How can customers pay for purchases?",
+            "type": "paraphrase",
+            "expected": "payment-methods",
+            "actual": null,
+            "similarity": 0.561494767666,
+            "lookup_ms": 24.022813002375187
+          },
+          {
+            "query": "Is paying with a bank card secure here?",
+            "type": "paraphrase",
+            "expected": "payment-security",
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.3077250005153473
+          },
+          {
+            "query": "Can customers safely enter card information to pay on this site?",
+            "type": "paraphrase",
+            "expected": "payment-security",
+            "actual": "payment-security",
+            "similarity": 0.804706513882,
+            "lookup_ms": 22.208807000424713
+          },
+          {
+            "query": "How can a product be exchanged for another size?",
+            "type": "paraphrase",
+            "expected": "exchange",
+            "actual": null,
+            "similarity": 0.705139100552,
+            "lookup_ms": 22.944095002458198
+          },
+          {
+            "query": "What should a customer do to arrange a size exchange?",
+            "type": "paraphrase",
+            "expected": "exchange",
+            "actual": "exchange",
+            "similarity": 0.807845950127,
+            "lookup_ms": 22.12043100007577
+          },
+          {
+            "query": "What steps cancel an order before dispatch?",
+            "type": "paraphrase",
+            "expected": "cancellation",
+            "actual": null,
+            "similarity": 0.723148047924,
+            "lookup_ms": 21.331039002689067
+          },
+          {
+            "query": "How is an order cancelled before shipping begins?",
+            "type": "paraphrase",
+            "expected": "cancellation",
+            "actual": "cancellation",
+            "similarity": 0.8093518018720001,
+            "lookup_ms": 20.501604998571565
+          },
+          {
+            "query": "Can damaged items be returned without their packaging?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.56444054842,
+            "lookup_ms": 21.09295199988992
+          },
+          {
+            "query": "Is the return deadline extended for holiday purchases?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.583658576012,
+            "lookup_ms": 23.308296000323026
+          },
+          {
+            "query": "Can a refund be paid as store credit instead?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.444993853569,
+            "lookup_ms": 20.91062199906446
+          },
+          {
+            "query": "Is standard delivery guaranteed by a specific date?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.608007907867,
+            "lookup_ms": 20.77688200006378
+          },
+          {
+            "query": "Is standard shipping free for large orders?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.704290091991,
+            "lookup_ms": 20.3672200004803
+          },
+          {
+            "query": "How much does overseas shipping cost?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": "shipping-cost",
+            "similarity": 0.803598284721,
+            "lookup_ms": 20.90013999986695
+          },
+          {
+            "query": "Are installment payments available?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.54380428791,
+            "lookup_ms": 20.893863998935558
+          },
+          {
+            "query": "Does paying by card require an extra authentication step?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.1053350026486441
+          },
+          {
+            "query": "Can a size exchange be requested after an item has been worn?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.6927084326740001,
+            "lookup_ms": 21.88515899979393
+          },
+          {
+            "query": "Can a cancelled order be reinstated?",
+            "type": "hard_negative",
+            "expected": null,
+            "actual": null,
+            "similarity": 0.569765210152,
+            "lookup_ms": 23.628897000889992
+          },
+          {
+            "query": "When will my refund arrive?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.2434120035322849
+          },
+          {
+            "query": "Cancel purchase ZX9876 before shipping.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.058334000845207
+          },
+          {
+            "query": "What is the status of our return?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9696160013845656
+          },
+          {
+            "query": "Is delivery available tomorrow?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.029887000186136
+          },
+          {
+            "query": "Refund the shipping charge of 12 euros.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9804229994188063
+          },
+          {
+            "query": "Send payment confirmation to buyer@example.org.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.970786000834778
+          },
+          {
+            "query": "Can I exchange my damaged purchase?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9684489996288903
+          },
+          {
+            "query": "Track the delivery for my account.",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9746190007717814
+          },
+          {
+            "query": "How does a binary search algorithm work?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 0.9962820004147943
+          },
+          {
+            "query": "Who wrote Pride and Prejudice?",
+            "type": "bypass",
+            "expected": null,
+            "actual": null,
+            "similarity": null,
+            "lookup_ms": 1.0688350012060255
+          }
+        ]
+      }
+    }
+  }
+}
